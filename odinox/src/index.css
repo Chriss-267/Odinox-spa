@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-bg: #0f172a;
+  --color-metal-silver: #cbd5e1;
+  --color-safety-accent: #3b82f6;
+  --color-industrial-card: #1e293b;
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-industrial-bg text-slate-900 overflow-x-hidden;
+}
+
+/* Industrial Style Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom Utilities */
+.metal-gradient-bottom {
+  background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0) 100%);
+}
+
+.metal-gradient-left {
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0) 100%);
+}
+
+.glass-nav {
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.row-container {
+  @apply px-4 md:px-12 py-8 overflow-x-hidden;
+}
+
+.row-posters {
+  @apply flex overflow-x-scroll overflow-y-hidden p-5;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+
+.row-poster {
+  @apply w-full object-contain max-h-24 md:max-h-40 mr-2.5 transition-transform duration-450 hover:scale-108;
+}
+
+.btn-industrial-main {
+  @apply bg-metal-silver text-industrial-bg px-6 py-2 rounded-sm font-bold text-lg transition-all flex items-center gap-2;
+}
+
+.btn-industrial-main:hover {
+  background-color: #f1f5f9;
+}
+
+.btn-industrial-secondary {
+  @apply bg-slate-700/50 text-white px-6 py-2 rounded-sm font-bold text-lg transition-all flex items-center gap-2 border border-slate-600;
+}
+
+.btn-industrial-secondary:hover {
+  background-color: rgba(51, 65, 85, 0.6);
+}
+
+/* Animations */
+@keyframes netflixFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-netflixFade {
+  animation: netflixFadeIn 1s ease-in;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
