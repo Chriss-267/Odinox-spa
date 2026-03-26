@@ -1,50 +1,48 @@
-import { Suspense, lazy } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import MovieRow from './components/MovieRow';
-import ClientCarousel from './components/ClientCarousel';
-import { odinoxData } from './data';
 
-// Lazy loading remaining components
-const Contact = lazy(() => import('./components/Contact'));
+import { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+import Navbar from './components/Navbar';
+import WhatsAppButton from './components/WhatsAppButton';
+
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const Products = lazy(() => import('./pages/Products'));
+const AboutUs = lazy(() => import('./pages/AboutUs'));
+const Services = lazy(() => import('./pages/Services'));
+const Blog = lazy(() => import('./pages/Blog'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const ProductDetails = lazy(() => import('./pages/ProductDetails'));
 const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
-    <div className="min-h-screen bg-industrial-bg text-white font-sans selection:bg-safety-accent selection:text-white">
-      <Navbar />
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen font-sans">
+        <Navbar />
 
-      <main className="pb-20">
-        <Hero />
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-brand-orange font-bold tracking-widest uppercase text-sm">Cargando...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/productos" element={<Products />} />
+            <Route path="/producto/:id" element={<ProductDetails />} />
+            <Route path="/nosotros" element={<AboutUs />} />
+            <Route path="/servicios" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contacto" element={<ContactPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
 
-        <div className="relative z-20 -mt-12 md:-mt-20">
-          <MovieRow
-            title="PRODUCTOS DESTACADOS"
-            items={odinoxData.categories[0].items}
-            isLargeRow
-          />
-
-          <section id="mision" className="px-4 md:px-12 py-16 max-w-5xl mx-auto text-center border-y border-slate-800 my-16 bg-gradient-to-b from-industrial-card/50 to-transparent rounded-sm">
-            <h2 className="text-safety-accent font-black tracking-[0.3em] text-xs mb-6 uppercase">Misión & Visión</h2>
-            <p className="text-xl md:text-3xl font-light italic text-slate-300 leading-relaxed">
-              "{odinoxData.mission}"
-            </p>
-          </section>
-
-          <ClientCarousel items={odinoxData.categories[1].items} />
-        </div>
-
-        <section id="contacto" className="mt-20">
-          <Suspense fallback={<div className="h-64 flex items-center justify-center text-slate-500 font-bold tracking-widest uppercase text-xs">Cargando...</div>}>
-            <Contact />
-          </Suspense>
-        </section>
-      </main>
-
-      <Suspense fallback={<div className="h-20 bg-industrial-bg"></div>}>
-        <Footer />
-      </Suspense>
-    </div>
+        <Suspense fallback={<div className="h-20 bg-industrial-bg"></div>}>
+          <Footer />
+        </Suspense>
+        
+        <WhatsAppButton />
+      </div>
+    </BrowserRouter>
   );
 }
 

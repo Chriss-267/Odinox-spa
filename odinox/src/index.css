@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-industrial-bg: #0f172a;
-  --color-metal-silver: #cbd5e1;
-  --color-safety-accent: #3b82f6;
-  --color-industrial-card: #1e293b;
+  --color-industrial-bg: #0A133C;
+  /* Navy Blue */
+  --color-metal-silver: #f8fafc;
+  /* Lighter white/grey for text */
+  --color-safety-accent: #FDD700;
+  /* Yellow Accent */
+  --color-brand-orange: #d97706;
+  /* Naranja/Cafe from logo */
+  --color-industrial-card: #0d1b54;
+  /* Slightly lighter navy for cards */
 }
 
 :root {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
@@ -20,7 +26,12 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  @apply bg-industrial-bg text-slate-900 overflow-x-hidden;
+  @apply bg-industrial-bg text-metal-silver overflow-x-hidden;
+}
+
+::selection {
+  background-color: var(--color-brand-orange);
+  color: #ffffff;
 }
 
 /* Industrial Style Scrollbar */
@@ -124,4 +135,211 @@ body {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Metallic Text Effect */
+.metal-text {
+  background: linear-gradient(135deg,
+      #94a3b8 0%,
+      #f1f5f9 25%,
+      #cbd5e1 50%,
+      #64748b 75%,
+      #e2e8f0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0px 6px 8px rgba(0, 0, 0, 0.3)) drop-shadow(1px 1px 0px rgba(255, 255, 255, 0.2));
+}
+
+/* Welding Animation */
+@keyframes weldFlash {
+
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.animate-weld-flash {
+  animation: weldFlash 0.1s infinite alternate;
+}
+
+@keyframes weldTorch {
+
+  0%,
+  100% {
+    transform: translate(-50%, -120%) translateX(-15px);
+  }
+
+  50% {
+    transform: translate(-50%, -120%) translateX(15px);
+  }
+}
+
+.animate-weld-torch {
+  animation: weldTorch 3s ease-in-out infinite;
+}
+
+@keyframes weldSparkFly {
+  0% {
+    transform: translate(0, 0) scale(1.5);
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
+}
+
+.weld-spark {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: weldSparkFly cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.weld-spark-1 {
+  --tx: -60px;
+  --ty: -40px;
+  animation-duration: 0.8s;
+  animation-delay: 0.1s;
+  background-color: #FDD700;
+}
+
+.weld-spark-2 {
+  --tx: 70px;
+  --ty: -50px;
+  animation-duration: 0.6s;
+  animation-delay: 0.2s;
+  background-color: #fff;
+}
+
+.weld-spark-3 {
+  --tx: -50px;
+  --ty: 60px;
+  animation-duration: 0.9s;
+  animation-delay: 0.05s;
+}
+
+.weld-spark-4 {
+  --tx: 60px;
+  --ty: 70px;
+  animation-duration: 0.7s;
+  animation-delay: 0.15s;
+  background-color: #FDD700;
+}
+
+.weld-spark-5 {
+  --tx: -80px;
+  --ty: 15px;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+}
+
+.weld-spark-6 {
+  --tx: 90px;
+  --ty: 25px;
+  animation-duration: 0.6s;
+  animation-delay: 0.25s;
+  background-color: #fff;
+}
+
+.weld-spark-7 {
+  --tx: -25px;
+  --ty: -80px;
+  animation-duration: 0.9s;
+  animation-delay: 0.4s;
+}
+
+.weld-spark-8 {
+  --tx: 35px;
+  --ty: -90px;
+  animation-duration: 0.7s;
+  animation-delay: 0.35s;
+  background-color: #FDD700;
+}
+
+.weld-spark-9 {
+  --tx: 15px;
+  --ty: 100px;
+  animation-duration: 0.8s;
+  animation-delay: 0.1s;
+}
+
+.weld-spark-10 {
+  --tx: -15px;
+  --ty: 90px;
+  animation-duration: 0.6s;
+  animation-delay: 0.5s;
+  background-color: #fff;
+}
+
+.weld-spark-11 {
+  --tx: 100px;
+  --ty: -15px;
+  animation-duration: 0.9s;
+  animation-delay: 0.45s;
+}
+
+.weld-spark-12 {
+  --tx: -100px;
+  --ty: -25px;
+  animation-duration: 0.7s;
+  animation-delay: 0.05s;
+  background-color: #FDD700;
+}
+
+.weld-spark-13 {
+  --tx: -40px;
+  --ty: -90px;
+  animation-duration: 0.75s;
+  animation-delay: 0.12s;
+}
+
+.weld-spark-14 {
+  --tx: 50px;
+  --ty: -100px;
+  animation-duration: 0.65s;
+  animation-delay: 0.22s;
+  background-color: #fff;
+}
+
+.weld-spark-15 {
+  --tx: -70px;
+  --ty: -70px;
+  animation-duration: 0.85s;
+  animation-delay: 0.32s;
+}
+
+.weld-spark-16 {
+  --tx: 80px;
+  --ty: 80px;
+  animation-duration: 0.95s;
+  animation-delay: 0.42s;
+  background-color: #FDD700;
 }

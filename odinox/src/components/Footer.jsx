@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -11,14 +12,13 @@ const Footer = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-12 uppercase tracking-widest leading-loose">
-                <a href="#" className="hover:text-white transition-colors">Cotización Online</a>
-                <a href="#mision" className="hover:text-white transition-colors">Misión y Visión</a>
-                <a href="#productos" className="hover:text-white transition-colors">Productos Acero</a>
-                <a href="#servicios" className="hover:text-white transition-colors">Mantenimiento</a>
-                <a href="#" className="hover:text-white transition-colors">Centro Técnico</a>
-                <a href="#" className="hover:text-white transition-colors">Certificaciones</a>
-                <a href="#" className="hover:text-white transition-colors">Aviso de Privacidad</a>
-                <a href="#contacto" className="hover:text-white transition-colors">Atención al Cliente</a>
+                <Link to="/" className="hover:text-white transition-colors">Inicio</Link>
+                <Link to="/productos" className="hover:text-white transition-colors">Productos Acero</Link>
+                <Link to="/servicios" className="hover:text-white transition-colors">Servicios</Link>
+                <Link to="/nosotros" className="hover:text-white transition-colors">Sobre Nosotros</Link>
+                <Link to="/blog" className="hover:text-white transition-colors">Blog Industrial</Link>
+                <Link to="/contacto" className="hover:text-white transition-colors">Cotización Online</Link>
+                <Link to="/contacto" className="hover:text-white transition-colors">Atención al Cliente</Link>
             </div>
 
             <button className="border border-slate-800 px-4 py-2 mb-12 hover:border-metal-silver hover:text-white transition-all uppercase tracking-widest text-[10px]">
