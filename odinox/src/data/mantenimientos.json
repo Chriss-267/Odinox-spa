@@ -1,0 +1,100 @@
+{
+    "hero": {
+        "label": "Servicio Técnico Especializado",
+        "title": "Mantenimientos Industriales",
+        "subtitle": "Protegemos su inversión. Equipos de acero inoxidable funcionando como el primer día, con planes de mantenimiento diseñados para la industria alimenticia, farmacéutica y gastronómica.",
+        "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1600&auto=format&fit=crop"
+    },
+    "mantenimientos": [
+        {
+            "id": 1,
+            "codigo": "01",
+            "titulo": "Mantenimiento Preventivo",
+            "resumen": "Inspecciones programadas que detectan fallas antes de que detengan su operación.",
+            "descripcion": "Revisamos de forma periódica sus equipos de acero inoxidable: soldaduras, uniones, niveladores, bisagras y superficies de contacto. Un plan preventivo bien ejecutado alarga la vida útil del equipo hasta en un 40% y evita paros de producción no planificados.",
+            "imagen": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop",
+            "alcance": [
+                "Inspección técnica programada",
+                "Ajuste de herrajes y niveladores",
+                "Revisión de soldaduras y uniones",
+                "Informe técnico con recomendaciones"
+            ]
+        },
+        {
+            "id": 2,
+            "codigo": "02",
+            "titulo": "Mantenimiento Correctivo",
+            "resumen": "Reparación de fallas, golpes y desgaste para devolver el equipo a condición operativa.",
+            "descripcion": "Cuando un equipo falla, cada hora cuenta. Atendemos reparaciones de estructuras, soldaduras fracturadas, deformaciones y componentes dañados directamente en sus instalaciones o en nuestro taller, con repuestos y materiales certificados.",
+            "imagen": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200&auto=format&fit=crop",
+            "alcance": [
+                "Reparación de soldaduras y fisuras",
+                "Corrección de deformaciones y golpes",
+                "Sustitución de piezas dañadas",
+                "Atención en sitio o en taller"
+            ]
+        },
+        {
+            "id": 3,
+            "codigo": "03",
+            "titulo": "Pulido y Restauración de Acero",
+            "resumen": "Recuperamos el acabado sanitario y la presentación original de sus superficies.",
+            "descripcion": "El acero inoxidable rayado, opaco o con corrosión superficial pierde su propiedad sanitaria y da mala imagen. Aplicamos pulido mecánico, satinado y pasivado para restaurar el acabado original y la resistencia a la corrosión, cumpliendo los estándares de la industria alimenticia y farmacéutica.",
+            "imagen": "https://images.unsplash.com/photo-1567093322503-341b14a35d52?q=80&w=1200&auto=format&fit=crop",
+            "alcance": [
+                "Pulido espejo y satinado",
+                "Eliminación de rayones y manchas",
+                "Pasivado anticorrosivo",
+                "Acabado sanitario certificable"
+            ]
+        },
+        {
+            "id": 4,
+            "codigo": "04",
+            "titulo": "Campanas y Ductería de Extracción",
+            "resumen": "Limpieza profunda y mantenimiento de sistemas de extracción de cocinas industriales.",
+            "descripcion": "La grasa acumulada en campanas y ductos es la principal causa de incendios en cocinas industriales. Realizamos desengrase profundo, revisión de extractores, sellado de uniones y verificación del flujo de aire para mantener su sistema seguro y dentro de norma.",
+            "imagen": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1200&auto=format&fit=crop",
+            "alcance": [
+                "Desengrase profundo de campanas",
+                "Limpieza interna de ductería",
+                "Revisión de motores y extractores",
+                "Certificado de limpieza para inspecciones"
+            ]
+        },
+        {
+            "id": 5,
+            "codigo": "05",
+            "titulo": "Equipos de Cocina Industrial",
+            "resumen": "Mantenimiento integral de hornos, cocinas, mesas y estaciones de trabajo.",
+            "descripcion": "Damos servicio a hornos de alta potencia, cocinas profesionales, mesas de trabajo y estaciones completas: calibración, ajuste de quemadores, revisión de aislamientos térmicos y reparación estructural, para que su cocina opere a máxima capacidad todos los días.",
+            "imagen": "https://images.unsplash.com/photo-1571066811602-716837d681de?q=80&w=1200&auto=format&fit=crop",
+            "alcance": [
+                "Revisión de quemadores y aislamiento",
+                "Ajuste y calibración de equipos",
+                "Reparación de superficies de trabajo",
+                "Mantenimiento de estaciones completas"
+            ]
+        },
+        {
+            "id": 6,
+            "codigo": "06",
+            "titulo": "Tanques y Equipos de Proceso",
+            "resumen": "Servicio especializado para tanques, lavamanos químicos y equipo farmacéutico.",
+            "descripcion": "Para la industria farmacéutica y alimenticia, la integridad del equipo es innegociable. Inspeccionamos tanques de almacenamiento, verificamos hermeticidad, reparamos válvulas y conexiones, y restauramos superficies de contacto sanitario con soldadura TIG de precisión.",
+            "imagen": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1200&auto=format&fit=crop",
+            "alcance": [
+                "Inspección de hermeticidad",
+                "Soldadura TIG sanitaria",
+                "Reparación de válvulas y conexiones",
+                "Verificación de superficies de contacto"
+            ]
+        }
+    ],
+    "proceso": [
+        { "paso": "1", "titulo": "Diagnóstico", "texto": "Visitamos sus instalaciones y evaluamos el estado real de sus equipos sin costo." },
+        { "paso": "2", "titulo": "Propuesta", "texto": "Recibe una cotización clara, con alcance, tiempos y garantía por escrito." },
+        { "paso": "3", "titulo": "Ejecución", "texto": "Personal calificado trabaja en horarios que no detienen su operación." },
+        { "paso": "4", "titulo": "Garantía", "texto": "Entregamos informe técnico y respaldamos cada trabajo realizado." }
+    ]
+}

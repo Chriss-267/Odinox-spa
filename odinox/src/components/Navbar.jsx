@@ -45,9 +45,8 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-8 font-semibold tracking-wider text-sm">
                     <Link to="/" className={isActive('/')}>INICIO</Link>
                     <Link to="/productos" className={isActive('/productos')}>PRODUCTOS</Link>
-                    <Link to="/servicios" className={isActive('/servicios')}>SERVICIOS</Link>
                     <Link to="/nosotros" className={isActive('/nosotros')}>SOBRE NOSOTROS</Link>
-                    <Link to="/blog" className={isActive('/blog')}>BLOG</Link>
+                    <Link to="/mantenimientos" className={isActive('/mantenimientos')}>MANTENIMIENTOS</Link>
                     <Link to="/contacto" className={isActive('/contacto')}>CONTACTO</Link>
                 </div>
 
@@ -71,9 +70,8 @@ const Navbar = () => {
                 <div className="flex flex-col px-4 py-4 space-y-1 font-semibold tracking-wider text-sm">
                     <Link to="/" className={`block px-4 py-3 rounded-sm transition-colors ${isActiveMobile('/')}`}>INICIO</Link>
                     <Link to="/productos" className={`block px-4 py-3 rounded-sm transition-colors ${isActiveMobile('/productos')}`}>PRODUCTOS</Link>
-                    <Link to="/servicios" className={`block px-4 py-3 rounded-sm transition-colors ${isActiveMobile('/servicios')}`}>SERVICIOS</Link>
                     <Link to="/nosotros" className={`block px-4 py-3 rounded-sm transition-colors ${isActiveMobile('/nosotros')}`}>SOBRE NOSOTROS</Link>
-                    <Link to="/blog" className={`block px-4 py-3 rounded-sm transition-colors ${isActiveMobile('/blog')}`}>BLOG</Link>
+                    <Link to="/mantenimientos" className={`block px-4 py-3 rounded-sm transition-colors ${isActiveMobile('/mantenimientos')}`}>MANTENIMIENTOS</Link>
                     <Link to="/contacto" className={`block px-4 py-3 rounded-sm transition-colors ${isActiveMobile('/contacto')}`}>CONTACTO</Link>
                     <div className="pt-4 pb-2">
                         <Link to="/contacto" className="block w-full text-center bg-brand-orange text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-[#b05e04] transition-colors shadow-md uppercase tracking-wide">

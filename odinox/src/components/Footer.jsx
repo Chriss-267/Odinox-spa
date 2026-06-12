@@ -14,9 +14,8 @@ const Footer = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-12 uppercase tracking-widest leading-loose">
                 <Link to="/" className="hover:text-white transition-colors">Inicio</Link>
                 <Link to="/productos" className="hover:text-white transition-colors">Productos Acero</Link>
-                <Link to="/servicios" className="hover:text-white transition-colors">Servicios</Link>
                 <Link to="/nosotros" className="hover:text-white transition-colors">Sobre Nosotros</Link>
-                <Link to="/blog" className="hover:text-white transition-colors">Blog Industrial</Link>
+                <Link to="/mantenimientos" className="hover:text-white transition-colors">Mantenimientos</Link>
                 <Link to="/contacto" className="hover:text-white transition-colors">Cotización Online</Link>
                 <Link to="/contacto" className="hover:text-white transition-colors">Atención al Cliente</Link>
             </div>

@@ -9,8 +9,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));
 const AboutUs = lazy(() => import('./pages/AboutUs'));
-const Services = lazy(() => import('./pages/Services'));
-const Blog = lazy(() => import('./pages/Blog'));
+const Mantenimientos = lazy(() => import('./pages/Mantenimientos'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ProductDetails = lazy(() => import('./pages/ProductDetails'));
@@ -29,8 +28,7 @@ function App() {
             <Route path="/productos" element={<Products />} />
             <Route path="/producto/:id" element={<ProductDetails />} />
             <Route path="/nosotros" element={<AboutUs />} />
-            <Route path="/servicios" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/mantenimientos" element={<Mantenimientos />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

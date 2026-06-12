@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import InfoSection from '../components/InfoSection';
 import ProductGallery from '../components/ProductGallery';
-import ServicesSection from '../components/ServicesSection';
 import ClientCarousel from '../components/ClientCarousel';
 import Contact from '../components/Contact';
 import { odinoxData } from '../data';
@@ -19,8 +18,6 @@ const Home = () => {
                     title="PRODUCTOS DESTACADOS"
                     items={odinoxData.categories[0].items.slice(0, 4)} // Show only top 4 on home
                 />
-
-                <ServicesSection />
 
                 <section className="px-4 md:px-12 py-16 max-w-5xl mx-auto text-center border-y border-slate-800 mt-0 mb-16 bg-gradient-to-b from-industrial-card/50 to-transparent rounded-sm">
                     <h2 className="mb-6 text-center">
