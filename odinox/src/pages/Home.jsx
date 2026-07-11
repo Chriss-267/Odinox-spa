@@ -5,11 +5,17 @@ import InfoSection from '../components/InfoSection';
 import ProductGallery from '../components/ProductGallery';
 import ClientCarousel from '../components/ClientCarousel';
 import Contact from '../components/Contact';
+import Seo from '../components/Seo';
 import { odinoxData } from '../data';
 
 const Home = () => {
     return (
         <main className="pb-20">
+            <Seo
+                title="Industrias Odinox | Estructuras y Equipos de Acero Inoxidable en El Salvador"
+                description="Fabricación de estructuras metálicas, equipos y muebles de acero inoxidable a la medida para la industria alimenticia, farmacéutica y de construcción en El Salvador."
+                path="/"
+            />
             <Hero />
             <InfoSection />
 

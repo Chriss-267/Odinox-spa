@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { odinoxData } from '../data';
 import { Link } from 'react-router-dom';
 import { Search, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const ITEMS_PER_PAGE = 6;
 
@@ -49,6 +50,11 @@ const Products = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 pb-20">
+            <Seo
+                title="Productos de Acero Inoxidable | Industrias Odinox El Salvador"
+                description="Tanques industriales, campanas de extracción, mesas de laboratorio, cocinas y ductería en acero inoxidable fabricados a la medida en El Salvador."
+                path="/productos"
+            />
             {/* Blue Header Area */}
             <div className="bg-industrial-bg pt-32 pb-20 px-4 rounded-b-[2rem] shadow-lg mb-12">
                 <div className="container mx-auto text-center">

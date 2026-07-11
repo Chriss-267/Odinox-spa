@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { odinoxData } from '../data';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -25,6 +26,12 @@ const ProductDetails = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 text-slate-700 pb-20">
+            <Seo
+                title={`${product.name} | Acero Inoxidable - Industrias Odinox`}
+                description={product.description}
+                path={`/producto/${product.id}`}
+                image={product.image}
+            />
             {/* Blue Header Area */}
             <div className="bg-industrial-bg pt-32 pb-32 px-4 rounded-b-[2rem] shadow-lg mb-[-6rem]">
                 <div className="container mx-auto max-w-6xl">

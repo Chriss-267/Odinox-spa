@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check, ArrowRight, Wrench, ShieldCheck, Clock } from 'lucide-react';
 import data from '../data/mantenimientos.json';
+import Seo from '../components/Seo';
 
 const WHATSAPP_NUMBER = '50374712525';
 
@@ -22,6 +23,11 @@ const Mantenimientos = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 text-slate-800">
+            <Seo
+                title="Mantenimientos Industriales | Industrias Odinox El Salvador"
+                description="Servicios de mantenimiento preventivo y correctivo para equipos y estructuras de acero inoxidable en El Salvador. Personal calificado y respuesta rápida."
+                path="/mantenimientos"
+            />
             {/* Blue Header Area (mismo estilo que Productos) */}
             <div className="bg-industrial-bg pt-32 pb-20 px-4 rounded-b-[2rem] shadow-lg mb-12">
                 <div className="container mx-auto text-center">

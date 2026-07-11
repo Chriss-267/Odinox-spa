@@ -1,9 +1,15 @@
 import React from 'react';
 import { odinoxData } from '../data';
+import Seo from '../components/Seo';
 
 const AboutUs = () => {
     return (
         <div className="pt-24 min-h-screen container mx-auto px-4 pb-20">
+            <Seo
+                title="Sobre Nosotros | Industrias Odinox - Acero Inoxidable El Salvador"
+                description="Conoce a Industrias Odinox: 5 años de experiencia fabricando equipos de acero inoxidable para los sectores farmacéutico, alimenticio y de construcción en El Salvador."
+                path="/nosotros"
+            />
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-16 uppercase">
                     Sobre <span className="text-safety-accent">Nosotros</span>

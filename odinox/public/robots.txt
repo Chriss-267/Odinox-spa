@@ -1,0 +1,7 @@
+# robots.txt - Industrias Odinox
+# Permite que todos los buscadores rastreen todo el sitio
+User-agent: *
+Allow: /
+
+# Ubicación del sitemap
+Sitemap: https://www.industriasodinox.com/sitemap.xml
