@@ -115,7 +115,7 @@ const Contact = () => {
                                     Si necesitas agregar algo o tienes una consulta urgente, escríbenos por WhatsApp.
                                 </p>
                                 <a
-                                    href="https://wa.me/50374712525?text=Hola%2C%20acabo%20de%20enviar%20una%20cotizaci%C3%B3n%20por%20el%20sitio%20web%20y%20quisiera%20agregar%20informaci%C3%B3n."
+                                    href="https://wa.me/50360122247?text=Hola%2C%20acabo%20de%20enviar%20una%20cotizaci%C3%B3n%20por%20el%20sitio%20web%20y%20quisiera%20agregar%20informaci%C3%B3n."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-500 text-white px-8 py-3.5 rounded-md font-bold text-sm uppercase tracking-wider transition-colors shadow-md"
