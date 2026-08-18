@@ -7,7 +7,7 @@ export default function WhatsAppButton() {
   const [isHidden, setIsHidden] = useState(false);
   const [message, setMessage] = useState('Hola, me gustaría solicitar una cotización. ¿Podrían brindarme más información?');
 
-  const phoneNumber = '50374712525'; // Defaulting to 503 code
+  const phoneNumber = '50360122247'; // Defaulting to 503 code
 
   const handleSend = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
